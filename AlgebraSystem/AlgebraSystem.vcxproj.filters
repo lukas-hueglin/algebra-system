@@ -7,15 +7,75 @@
     <Filter Include="Source\Pch">
       <UniqueIdentifier>{855681d0-b979-4843-815f-f08354fdeae7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Core">
+      <UniqueIdentifier>{06446c64-d7d6-409b-9294-2aa5c4c27b28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Common">
+      <UniqueIdentifier>{f1f0e17e-fde1-437e-8879-b49e4fdff9b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Common\Public">
+      <UniqueIdentifier>{b74e5822-66fb-4813-a3ba-6607e7907ae7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Common\Private">
+      <UniqueIdentifier>{fe501f7a-4cee-4c16-be82-146b3d6d3a0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Core\Public">
+      <UniqueIdentifier>{531b5507-4ef4-44c2-b061-5aa3c8d0b330}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Core\Private">
+      <UniqueIdentifier>{a8f99149-e0ba-4025-83b6-a6cc2287290c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\CAS.cpp">
       <Filter>Source\Pch</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Common\Operation.cpp">
+      <Filter>Source\Common\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\Expression.cpp">
+      <Filter>Source\Common\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\Function.cpp">
+      <Filter>Source\Common\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\Set.cpp">
+      <Filter>Source\Common\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\Variable.cpp">
+      <Filter>Source\Common\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Core\Environment.cpp">
+      <Filter>Source\Core\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Core\Parser.cpp">
+      <Filter>Source\Core\Private</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\CAS.h">
       <Filter>Source\Pch</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\Operation.h">
+      <Filter>Source\Common\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\Expression.h">
+      <Filter>Source\Common\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\Function.h">
+      <Filter>Source\Common\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\Set.h">
+      <Filter>Source\Common\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\Variable.h">
+      <Filter>Source\Common\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Core\Parser.h">
+      <Filter>Source\Core\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Core\Environment.h">
+      <Filter>Source\Core\Public</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|x64">
@@ -55,7 +55,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>DEBUG;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>DEBUG;BUILD_DLL;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
@@ -67,6 +67,9 @@
       <SubSystem>NotSet</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PostBuildEvent>
+      <Command>copy $(OutDir)\AlgebraSystem.dll  $(SolutionDir)\Build\BlankProject\$(Configuration)</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -74,7 +77,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;BUILD_DLL;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
@@ -92,9 +95,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Source\CAS.cpp" />
+    <ClCompile Include="Source\Common\Operation.cpp" />
+    <ClCompile Include="Source\Common\Expression.cpp" />
+    <ClCompile Include="Source\Common\Function.cpp" />
+    <ClCompile Include="Source\Common\Set.cpp" />
+    <ClCompile Include="Source\Common\Variable.cpp" />
+    <ClCompile Include="Source\Core\Environment.cpp" />
+    <ClCompile Include="Source\Core\Parser.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\CAS.h" />
+    <ClInclude Include="Include\Common\Operation.h" />
+    <ClInclude Include="Include\Common\Expression.h" />
+    <ClInclude Include="Include\Common\Function.h" />
+    <ClInclude Include="Include\Common\Set.h" />
+    <ClInclude Include="Include\Common\Variable.h" />
+    <ClInclude Include="Include\Core\Environment.h" />
+    <ClInclude Include="Include\Core\Parser.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
